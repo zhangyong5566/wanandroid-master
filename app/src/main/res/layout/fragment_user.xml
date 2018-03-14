@@ -1,0 +1,58 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                xmlns:fresco="http://schemas.android.com/apk/res-auto"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/activity_bg"
+                tools:context="com.zhang.wanandroiod.mvp.ui.fragment.UserFragment">
+    <RelativeLayout android:id="@+id/rl_user"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:background="@color/refresh_color">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/main_sdv"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_centerInParent="true"
+            fresco:actualImageScaleType="focusCrop"
+            fresco:fadeDuration="5000"
+            fresco:failureImage="@mipmap/loadfail"
+            fresco:failureImageScaleType="centerInside"
+            fresco:placeholderImage="@mipmap/defeat"
+            fresco:placeholderImageScaleType="fitCenter"
+            fresco:progressBarAutoRotateInterval="5000"
+            fresco:progressBarImage="@mipmap/loading"
+            fresco:progressBarImageScaleType="centerInside"
+            fresco:retryImageScaleType="centerCrop"
+            fresco:roundAsCircle="true">
+        </com.facebook.drawee.view.SimpleDraweeView>
+
+        <TextView android:id="@+id/tv_username"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_below="@id/main_sdv"
+                  android:layout_centerHorizontal="true"
+                  android:layout_marginTop="10dp"
+                  android:text="未登录"
+                  android:textColor="@color/activity_bg"
+                  android:textSize="14sp"/>
+    </RelativeLayout>
+
+    <android.support.v7.widget.RecyclerView android:id="@+id/ry_user"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_below="@id/rl_user"
+                                            android:layout_margin="10dp">
+    </android.support.v7.widget.RecyclerView>
+    <Button android:id="@+id/bt_login"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@id/ry_user"
+            android:layout_margin="10dp"
+            android:text="登录"
+            android:textSize="14sp"
+            android:textColor="@android:color/holo_red_light"/>
+
+</RelativeLayout>

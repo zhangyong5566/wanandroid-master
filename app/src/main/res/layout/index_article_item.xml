@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_marginRight="6dp"
+    android:layout_marginLeft="6dp"
+    android:layout_height="wrap_content"
+    android:background="@drawable/item_bg"
+    >
+
+
+
+    <ImageView
+        android:layout_centerVertical="true"
+
+        android:id="@+id/imgView"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_margin="6dp"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/icon_new"/>
+
+        <TextView
+            android:layout_toRightOf="@id/imgView"
+            android:id="@+id/tv_author"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:gravity="center_vertical"
+            android:lineSpacingExtra="2px"
+            android:padding="4dp"
+            android:text="作者"
+            android:textColor="@color/author_color"
+            android:textSize="12sp"/>
+    <ImageView android:layout_width="20dp"
+               android:layout_height="20dp"
+               android:layout_margin="6dp"
+               android:id="@+id/iv_collection"
+               android:scaleType="centerCrop"
+               android:layout_marginRight="10dp"
+               android:layout_alignTop="@id/tv_author"
+               android:layout_alignParentRight="true"
+               android:src="@mipmap/collection_nomor"/>
+        <TextView
+            android:layout_toRightOf="@id/imgView"
+            android:layout_below="@id/tv_author"
+            android:id="@+id/tv_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:padding="4dp"
+            android:singleLine="true"
+            android:text="标题"
+            android:textColor="#555555"
+            android:textSize="16sp"
+            android:textStyle="bold"/>
+
+            <TextView
+                android:layout_toRightOf="@id/imgView"
+                android:layout_below="@id/tv_title"
+                android:id="@+id/tv_type"
+                android:gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:lineSpacingExtra="2px"
+                android:padding="4dp"
+                android:text="分类"
+                android:textColor="@color/top_tab_textcolor_normal"
+                android:textSize="12sp"/>
+            <TextView
+                android:layout_toRightOf="@id/tv_type"
+                android:layout_below="@id/tv_title"
+                android:layout_marginRight="10dp"
+                android:id="@+id/tv_time"
+                android:layout_width="match_parent"
+                android:gravity="center_vertical|right"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:lineSpacingExtra="2px"
+                android:singleLine="true"
+                android:maxLines="1"
+                android:padding="4dp"
+                android:text="时间"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="12sp"/>
+
+</RelativeLayout>

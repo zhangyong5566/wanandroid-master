@@ -1,0 +1,63 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/activity_bg"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/layoutSwipeRefresh"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/ry_navigation"
+            android:paddingTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+
+    <com.victor.loading.rotate.RotateLoading
+        android:id="@+id/rotateloading"
+        android:layout_width="@dimen/dimen_loading_size"
+        android:layout_height="@dimen/dimen_loading_size"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        app:loading_color="@color/loading_color"
+        app:loading_speed="6"
+        app:loading_width="2dp" />
+    <RelativeLayout
+        android:visibility="gone"
+        android:id="@+id/retry_bt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
+
+        <com.airbnb.lottie.LottieAnimationView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/retry_animation_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            app:lottie_fileName="anim/cloud_disconnection.json"
+            app:lottie_scale="1"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+        />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/retry_animation_view"
+            android:layout_centerHorizontal="true"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="点击重新加载"
+            android:visibility="visible"
+        />
+    </RelativeLayout>
+
+
+</RelativeLayout>

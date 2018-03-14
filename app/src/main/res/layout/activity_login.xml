@@ -1,0 +1,121 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#eeeeee"
+                tools:context="com.zhang.wanandroiod.mvp.ui.fragment.LoginFragment">
+
+    <com.airbnb.lottie.LottieAnimationView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/retry_animation_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        app:lottie_autoPlay="true"
+        app:lottie_fileName="anim/go_login.json"
+        app:lottie_loop="true"
+        app:lottie_scale="1"/>
+    <ImageView android:id="@+id/iv_back"
+               android:layout_margin="10dp"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:src="@mipmap/back"/>
+    <RelativeLayout android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/retry_animation_view"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/item_bg"
+                    android:paddingBottom="30dp">
+        <LinearLayout android:id="@+id/ll_username"
+                      android:layout_width="250dp"
+                      android:layout_height="60dp"
+                      android:layout_centerHorizontal="true"
+                      android:orientation="horizontal">
+            <ImageView android:layout_width="17dp"
+                       android:layout_height="17dp"
+                       android:layout_gravity="center_vertical"
+                       android:src="@mipmap/username"/>
+
+            <android.support.design.widget.TextInputLayout android:id="@+id/til_username"
+                                                           android:layout_width="match_parent"
+                                                           android:layout_height="match_parent"
+                                                           android:hint="用户名："
+                                                           android:padding="5dp">
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/userName_editText"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerHorizontal="true"
+                    android:ems="22"
+                    android:inputType="textPersonName"
+                    android:maxLength="20"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="5dp"
+                    android:paddingTop="5dp"
+                    android:textSize="14sp"/>
+
+            </android.support.design.widget.TextInputLayout>
+        </LinearLayout>
+
+        <LinearLayout android:id="@+id/ll_pwd"
+                      android:layout_width="250dp"
+                      android:layout_height="60dp"
+                      android:layout_below="@id/ll_username"
+                      android:layout_centerHorizontal="true"
+                      android:orientation="horizontal">
+            <ImageView android:layout_width="17dp"
+                       android:layout_height="17dp"
+                       android:layout_gravity="center_vertical"
+                       android:src="@mipmap/password"/>
+            <android.support.design.widget.TextInputLayout android:id="@+id/til_pwd"
+                                                           android:layout_width="match_parent"
+                                                           android:layout_height="match_parent"
+                                                           android:hint="密码："
+                                                           android:padding="5dp"
+                                                           app:passwordToggleEnabled="true">
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/password_editText"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerHorizontal="true"
+                    android:ems="22"
+                    android:inputType="textPassword"
+                    android:maxLength="20"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="5dp"
+                    android:paddingTop="5dp"
+                    android:textSize="14sp"/>
+            </android.support.design.widget.TextInputLayout>
+        </LinearLayout>
+        <LinearLayout android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:layout_below="@id/ll_pwd"
+                      android:orientation="horizontal"
+                      android:paddingLeft="20dp"
+                      android:paddingRight="20dp">
+            <Button android:layout_width="0dp"
+                    android:id="@+id/bt_login"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:text="登录"
+                    android:textSize="14sp"/>
+            <Button android:layout_width="0dp"
+                    android:id="@+id/bt_regist"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:text="注册"
+                    android:textSize="14sp"/>
+        </LinearLayout>
+    </RelativeLayout>
+    <com.victor.loading.rotate.RotateLoading
+        android:id="@+id/rotateloading"
+        android:layout_centerInParent="true"
+        android:layout_width="@dimen/dimen_loading_size"
+        android:layout_height="@dimen/dimen_loading_size"
+        android:layout_gravity="center"
+        app:loading_color="@color/loading_color"
+        app:loading_speed="6"
+        app:loading_width="2dp" />
+</RelativeLayout>

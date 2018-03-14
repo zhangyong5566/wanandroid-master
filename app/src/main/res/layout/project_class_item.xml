@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_marginLeft="6dp"
+    android:layout_marginRight="6dp"
+    android:background="@drawable/item_bg">
+
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/main_sdv"
+        android:layout_width="90dp"
+        android:layout_height="140dp"
+        fresco:actualImageScaleType="focusCrop"
+        fresco:placeholderImage="@mipmap/ic_launcher"
+        fresco:placeholderImageScaleType="fitCenter"
+        fresco:progressBarImage="@mipmap/loading"
+        fresco:progressBarImageScaleType="centerInside"
+        android:layout_centerVertical="true"
+        android:layout_margin="6dp"
+        fresco:failureImage="@mipmap/loadfail"
+        fresco:failureImageScaleType="centerInside"
+        fresco:progressBarAutoRotateInterval="5000"
+        ></com.facebook.drawee.view.SimpleDraweeView>
+
+
+    <ImageView
+        android:id="@+id/iv_collection"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_alignBottom="@+id/tv_author"
+        android:layout_alignParentEnd="true"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/collection_nomor" />
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_toRightOf="@id/main_sdv"
+        android:padding="4dp"
+        android:singleLine="true"
+        android:text="标题"
+        android:textColor="#555555"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+
+    <TextView
+
+        android:id="@+id/tv_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/main_sdv"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="4dp"
+        android:layout_toRightOf="@id/main_sdv"
+        android:gravity="center_vertical|right"
+        android:lineSpacingExtra="2px"
+        android:maxLines="1"
+        android:padding="4dp"
+        android:singleLine="true"
+        android:text="时间"
+        android:textColor="@android:color/darker_gray"
+        android:textSize="12sp" />
+
+    <TextView
+        android:layout_centerHorizontal="true"
+        android:id="@+id/tv_author"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/main_sdv"
+        android:layout_marginTop="4dp"
+        android:layout_toRightOf="@id/tv_time"
+        android:gravity="center_vertical"
+        android:lineSpacingExtra="2px"
+        android:padding="4dp"
+        android:text="作者"
+        android:textColor="@color/author_color"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/tv_introduction"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tv_time"
+        android:layout_below="@id/tv_title"
+        android:layout_marginTop="4dp"
+        android:layout_toRightOf="@id/main_sdv"
+        android:padding="4dp"
+        android:maxLines="5"
+        android:ellipsize="end"
+        android:text="简介"
+        android:textColor="@android:color/darker_gray"
+        android:textSize="14sp" />
+
+</RelativeLayout>
